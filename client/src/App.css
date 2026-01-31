@@ -1,0 +1,410 @@
+/* GLOBAL RESETS */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.logo-i, .logo-pdf {
+  color: #E33633; /* iLovePDF Red */
+}
+
+/* NAVBAR BUTTONS (Replacing Links) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Adds proper space between the links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #E33633;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 0;
+}
+
+.nav-btn:hover {
+  color: #E33633;
+}
+
+.login-btn {
+  background: #E33633;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.login-btn:hover {
+  background: #c92e2b;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f7f7f7;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* GRID LAYOUT */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* TOOL CARDS */
+.tool-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: white;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  color: #E33633;
+}
+
+.tool-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.tool-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1; 
+}
+
+/* FORMS & BUTTONS */
+.tool-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-upload-btn {
+  background: #E33633;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.file-upload-btn:hover {
+  background: #c92e2b;
+}
+
+.text-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.text-input:focus {
+  border-color: #E33633;
+}
+
+.action-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-btn:disabled {
+  background: #999;
+}
+
+.status-msg {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.tool-card-link {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.home-card {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* --- WORKSPACE & DROP ZONE STYLES --- */
+
+.workspace-container {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.workspace-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.workspace-header h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* The Grey Box Area */
+.workspace-box {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+/* The Clickable Upload Zone */
+.drop-zone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  border: 2px dashed transparent;
+  transition: all 0.2s;
+}
+
+.drop-zone:hover {
+  background-color: #fdfdfd;
+  border-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.drop-zone-icon {
+  width: 80px;
+  height: 80px;
+  color: #E33633;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* The Big Red "Select PDF files" Button */
+.big-select-btn {
+  background-color: #E33633;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(227, 54, 51, 0.3);
+  transition: background 0.2s, transform 0.1s;
+  pointer-events: none; /* Let the parent div handle the click */
+}
+
+.drop-zone:hover .big-select-btn {
+  background-color: #d62d2a;
+}
+
+.drop-subtext {
+  color: #666;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Processing State (After Upload) */
+.process-area {
+  width: 100%;
+  text-align: center;
+}
+
+.file-summary {
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 16px;
+}
+
+.big-input {
+  font-size: 18px;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 2px solid #eee;
+}
+
+.big-input:focus {
+  border-color: #E33633;
+}
+
+.big-action-btn {
+  background-color: #333; /* Black/Dark Button for the final step */
+  color: white;
+  font-size: 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.big-action-btn:hover {
+  background-color: #000;
+}
+
+/* --- CRITICAL FIXES --- */
+
+/* 1. Hides the ugly default file input */
+.hidden-input {
+  display: none !important;
+}
+
+/* 2. Fixes the Drop Zone layout */
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.drop-zone:hover {
+  border-color: #E33633;
+  background-color: #fff5f5;
+}
+
+/* 3. Styles the Big Red Button inside the drop zone */
+.big-select-btn {
+  background-color: #E33633;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  pointer-events: none; /* Allows click to pass through to the drop-zone */
+}
